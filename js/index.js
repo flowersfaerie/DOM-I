@@ -1,11 +1,13 @@
 const siteContent = {
   "nav": {
+	"nav-item-0": "Home",
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+	"nav-item-7": "Blog",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -76,42 +78,58 @@ middleImg.src = siteContent['main-content']['middle-img-src'];
 // Updates the CTA H1 text by Tag Name
 let ctaH1 = document.getElementsByTagName('h1')[0];
 ctaH1.textContent = siteContent['cta']['h1'];
+ctaH1.style.color = "darkviolet";
 
 // Updates the CTA Button text by Tag Name
 let ctaButton = document.getElementsByTagName('button')[0];
 ctaButton.textContent = siteContent['cta']['button'];
 
-// Updates the Features Content H4 & P #1 by Tag Name
+// Updates the Features Content H4 & P by Tag Name
 let topContent1H = document.getElementsByTagName('h4')[0];
-topContent1H.textContent - siteContent['main-content']['features-h4'];
+topContent1H.textContent = siteContent['main-content']['features-h4'];
+topContent1H.style.display = "flex";
+topContent1H.style.justifyContent = "center";
+topContent1H.style.color = "darkviolet";
 
 let topContent1P = document.getElementsByTagName('p')[0];
 topContent1P.textContent = siteContent['main-content']['features-content'];
 
-// Updates the About Content H4 & P #1 by Tag Name
+// Updates the About Content H4 & P by Tag Name
 let topContent2H = document.getElementsByTagName('h4')[1];
-topContent2H.textContent - siteContent['main-content']['about-h4'];
+topContent2H.textContent = siteContent['main-content']['about-h4'];
+topContent2H.style.display = "flex";
+topContent2H.style.justifyContent = "center";
+topContent2H.style.color = "darkviolet";
 
 let topContent2P = document.getElementsByTagName('p')[1];
 topContent2P.textContent = siteContent['main-content']['about-content'];
 
-// Updates the Services Content H4 & P #1 by Tag Name
+// Updates the Services Content H4 & P by Tag Name
 let topContent3H = document.getElementsByTagName('h4')[2];
-topContent3H.textContent - siteContent['main-content']['services-h4'];
+topContent3H.textContent = siteContent['main-content']['services-h4'];
+topContent3H.style.display = "flex";
+topContent3H.style.justifyContent = "center";
+topContent3H.style.color = "darkviolet";
 
 let topContent3P = document.getElementsByTagName('p')[2];
 topContent3P.textContent = siteContent['main-content']['services-content'];
 
-// Updates the Product Content H4 & P #1 by Tag Name
+// Updates the Product Content H4 & P by Tag Name
 let topContent4H = document.getElementsByTagName('h4')[3];
-topContent4H.textContent - siteContent['main-content']['product-h4'];
+topContent4H.textContent = siteContent['main-content']['product-h4'];
+topContent4H.style.display = "flex";
+topContent4H.style.justifyContent = "center";
+topContent4H.style.color = "darkviolet";
 
 let topContent4P = document.getElementsByTagName('p')[3];
 topContent4P.textContent = siteContent['main-content']['product-content'];
 
-// Updates the Vision Content H4 & P #1 by Tag Name
+// Updates the Vision Content H4 & P by Tag Name
 let topContent5H = document.getElementsByTagName('h4')[4];
-topContent5H.textContent - siteContent['main-content']['vision-h4'];
+topContent5H.textContent = siteContent['main-content']['vision-h4'];
+topContent5H.style.display = "flex";
+topContent5H.style.justifyContent = "center";
+topContent5H.style.color = "darkviolet";
 
 let topContent5P = document.getElementsByTagName('p')[4];
 topContent5P.textContent = siteContent['main-content']['vision-content'];
@@ -133,19 +151,23 @@ contactP3.textContent = siteContent['contact']['email'];
 let footerP = document.getElementsByTagName('p')[8];
 footerP.textContent = siteContent['footer']['copyright'];
 
+// Adds a new Nav link using .Prepend
+let nav = document.getElementsByTagName('nav')[0];
+let navPrepend = document.createElement('a');
+navPrepend.textContent = siteContent['nav']['nav-item-0'];
+navPrepend.src = "#";
+nav.prepend(navPrepend);
+
+// Adds a new Nav link using .Append
+let navAppend = document.createElement('a');
+navAppend.src = "#";
+navAppend.textContent = siteContent['nav']['nav-item-7'];
+nav.appendChild(navAppend);
+
 // Updates the navigation links color to "green"
 let navGreen = document.getElementsByTagName('a');
 Array.from(navGreen).forEach(element => {
 element.style.color = "green";
 element.style.fontWeight = "bolder"});
-
-// Adds a new Nav link using .Prepend
-
-
-
-// Adds a new Nav link using .Append
-
-
-
 
 
